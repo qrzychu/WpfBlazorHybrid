@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNameSpace>Wpf.Blazor</RootNameSpace>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Excubo.Blazor.Canvas" Version="3.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="7.0.49" />
+      <PackageReference Include="MudBlazor" Version="6.0.18" />
+      <PackageReference Include="SkiaSharp.Views.Blazor" Version="2.88.3" />
+      <PackageReference Include="System.Reactive" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="wwwroot\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\MyCanvas.razor" />
+      <_ContentIncludedByDefault Remove="Components\Wordle\Letter.razor" />
+      <_ContentIncludedByDefault Remove="Components\Wordle\WordleGame.razor" />
+      <_ContentIncludedByDefault Remove="Components\Wordle\WordleHost.razor" />
+    </ItemGroup>
+
+</Project>
